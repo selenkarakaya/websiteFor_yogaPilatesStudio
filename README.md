@@ -1,4 +1,4 @@
-# Black Rock Yoga Pilates Studio ![Monthly Planner Preview](./dist/favicon/yoga/favicon-32x32.png)
+# Black Rock Yoga Pilates Studio ![Black Rock Yoga Pilates Studio](./dist/favicon/yoga/favicon-32x32.png)
 
 ## Description
 The **Black Rock Yoga Pilates Studio** is a website designed for yoga and pilates instructors to showcase their courses and manage bookings. The site features an instructor profile, course information, and a variety of pages for user interaction, including registration, login, and feedback submissions. Users can book lessons, adjust the number of participants, and complete payments online. This project aims to enhance the experience of both instructors and students in the world of yoga and pilates.
@@ -27,17 +27,8 @@ The **Black Rock Yoga Pilates Studio** is a website designed for yoga and pilate
 - **Session Storage**: Used for booking classes and transferring data to the shopping cart page.
 
 ## Demo 🔗
+You can check out a live demo of the Yoga&Pilates Studio ([https://blackrockpilatesyoga.netlify.app/]).
 
-You can check out a live demo of the Shopping List ([https://blackrockpilatesyoga.netlify.app/]).
-
-
-
-## Installation
-To set up the Black Rock Yoga Pilates Studio website locally:
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/black-rock-yoga-pilates-studio.git
 ## Installation
 To set up the Monthly Planner on your local machine:
 
