@@ -39,7 +39,8 @@ Through the **Yoga Pilates Studio** project, I gained valuable insights and skil
 This project solidified my foundational knowledge of web development and deepened my interest in creating applications that enhance user experiences in health and wellness.
 
 ## Demo 🔗
-You can check out a live demo of the Yoga&Pilates Studio ([https://blackrockpilatesyoga.netlify.app/]).
+
+🧘‍♀️🧘‍♂️🪷 [**You can check out a live demo of the Yoga&Pilates Studio!**](https://blackrockpilatesyoga.netlify.app/)
 
 ## Installation
 To set up the Monthly Planner on your local machine:
