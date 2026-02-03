@@ -1,74 +1,66 @@
-// register
+// Handle register button click
+document.getElementById("create").addEventListener("click", function (e) {
+  e.preventDefault(); // Prevent form from submitting and refreshing the page
 
-document.getElementById("create").addEventListener("click", control);
-function control() {
-  let firstName = document.querySelector("#firstName").value;
-  let lastName = document.querySelector("#lastName").value;
-  let email = document.querySelector("#email").value;
+  // Get input values
+  let firstName = document.querySelector("#firstName").value.trim();
+  let lastName = document.querySelector("#lastName").value.trim();
+  let email = document.querySelector("#email").value.trim();
   let password = document.querySelector("#password").value;
   let confirmPassword = document.querySelector("#confirmPassword").value;
-  if (
-    firstName != "" &&
-    lastName != "" &&
-    email != "" &&
-    password != "" &&
-    confirmPassword != "" &&
-    password === confirmPassword
-  ) {
-    let html = `You have been registered`;
-    document.querySelector("#msg").innerHTML = html;
-    document.querySelector("#msg").classList.add("msg");
-    setTimeout(function () {
-      document.querySelector("#msg").innerHTML = "";
-      document.querySelector("#msg").classList.remove("msg");
-    }, 2000);
-  } else if (password != confirmPassword) {
-    let html = `Do not match passwords`;
-    document.querySelector("#msg").innerHTML = html;
-    document.querySelector("#msg").classList.add("msg");
-    setTimeout(function () {
-      document.querySelector("#msg").innerHTML = "";
-      document.querySelector("#msg").classList.remove("msg");
-    }, 2000);
-  } else {
-    let html = `Please fill the blank`;
-    document.querySelector("#msg").innerHTML = html;
-    document.querySelector("#msg").classList.add("msg");
-    setTimeout(function () {
-      document.querySelector("#msg").innerHTML = "";
-      document.querySelector("#msg").classList.remove("msg");
+  let msg = document.querySelector("#msg");
+
+  // Helper function to show messages
+  function showMsg(text) {
+    msg.innerHTML = text;
+    msg.classList.add("msg");
+
+    // Remove message after 2 seconds
+    setTimeout(() => {
+      msg.innerHTML = "";
+      msg.classList.remove("msg");
     }, 2000);
   }
-}
 
-// save localStorage
-document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("create").addEventListener("click", addUser);
-});
+  // Check if any input is empty
+  if (!firstName || !lastName || !email || !password || !confirmPassword) {
+    showMsg("Please fill in all fields");
+    return;
+  }
 
-let users = [];
-const addUser = (e) => {
-  e.preventDefault(); //to stop the form submitting
-  // create user object
+  // Check if passwords match
+  if (password !== confirmPassword) {
+    showMsg("Passwords do not match");
+    return;
+  }
+
+  // Get users from localStorage or create an empty array
+  let users = JSON.parse(localStorage.getItem("MyUsersList")) || [];
+
+  // Create a new user object
   let user = {
-    name: document.querySelector("#firstName").value,
-    title: document.querySelector("#email").value,
-    password: document.querySelector("#password").value,
+    firstName,
+    lastName,
+    email,
+    password,
   };
 
+  // Save user to array and localStorage
   users.push(user);
-  //saving to localStorage
   localStorage.setItem("MyUsersList", JSON.stringify(users));
 
-  //empty inputs after register and save localStorage
+  // Show success message
+  showMsg("You have been registered successfully");
+
+  // Clear input fields after registration
   document.querySelector("#firstName").value = "";
   document.querySelector("#lastName").value = "";
   document.querySelector("#email").value = "";
   document.querySelector("#password").value = "";
   document.querySelector("#confirmPassword").value = "";
-  setTimeout(() => {
-    window.location.href = "./signin.html";
-  }, 1000);
-};
 
-// set time out
+  // Redirect to login page after 2 seconds
+  setTimeout(() => {
+    window.location.href = "./signin.html"; // Change path if needed
+  }, 2000);
+});

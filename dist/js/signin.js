@@ -1,34 +1,45 @@
-//check log in
+// Handle login button click
+document.getElementById("login").addEventListener("click", function (e) {
+  e.preventDefault(); // Prevent form submission
 
-document.getElementById("login").addEventListener("click", loginUser);
-function loginUser() {
-  const loginEmail = document.querySelector("#email").value;
+  // Get input values
+  const loginEmail = document.querySelector("#email").value.trim();
   const loginPass = document.querySelector("#password").value;
-  if (localStorage.getItem("MyUsersList")) {
-    const allStoredUsers = JSON.parse(localStorage.getItem("MyUsersList"));
-    const matchedUser = allStoredUsers.filter((user) => {
-      return loginEmail === user.title && loginPass === user.password;
-    });
-    if (matchedUser.length) {
-      console.log(matchedUser[0].name);
-      let html = `Login successful`;
-      document.querySelector("#msg").innerHTML = html;
-      document.querySelector("#msg").classList.add("msg");
-      setTimeout(function () {
-        document.querySelector("#msg").innerHTML = "";
-        document.querySelector("#msg").classList.remove("msg");
-      }, 2000);
-    } else {
-      let html = `Wrong credentials`;
-      document.querySelector("#msg").innerHTML = html;
-      document.querySelector("#msg").classList.add("msg");
-      setTimeout(function () {
-        document.querySelector("#msg").innerHTML = "";
-        document.querySelector("#msg").classList.remove("msg");
-      }, 2000);
-    }
+  const msg = document.querySelector("#msg");
+
+  // Helper function to show messages
+  function showMsg(text) {
+    msg.innerHTML = text;
+    msg.classList.add("msg");
+
+    setTimeout(() => {
+      msg.innerHTML = "";
+      msg.classList.remove("msg");
+    }, 2000);
   }
-  setTimeout(() => {
-    window.location.href = "./index.html";
-  }, 1000);
-}
+
+  // Check if inputs are empty
+  if (!loginEmail || !loginPass) {
+    showMsg("Please fill in all fields");
+    return;
+  }
+
+  // Get users from localStorage
+  const storedUsers = JSON.parse(localStorage.getItem("MyUsersList")) || [];
+
+  // Find matching user
+  const matchedUser = storedUsers.find(
+    (user) => user.email === loginEmail && user.password === loginPass
+  );
+
+  if (matchedUser) {
+    showMsg("Login successful");
+
+    // Redirect after successful login
+    setTimeout(() => {
+      window.location.href = "./index.html"; // change path if needed
+    }, 1000);
+  } else {
+    showMsg("Wrong email or password");
+  }
+});
