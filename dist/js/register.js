@@ -66,6 +66,9 @@ const addUser = (e) => {
   document.querySelector("#email").value = "";
   document.querySelector("#password").value = "";
   document.querySelector("#confirmPassword").value = "";
+  setTimeout(() => {
+    window.location.href = "./signin.html";
+  }, 1000);
 };
 
 // set time out
