@@ -1,7 +1,27 @@
-# Black Rock Yoga Pilates Studio ![Black Rock Yoga Pilates Studio](./dist/favicon/yoga/favicon-32x32.png) 
+<div align="center">
+
+# Black Rock Yoga-Pilates Studio ![Black Rock Yoga Pilates Studio](./dist/favicon/yoga/favicon-32x32.png) 
+
+</div>
+
 
 ## Description
-The **Black Rock Yoga Pilates Studio** is a website designed for yoga and pilates instructors to showcase their courses and manage bookings. The site features an instructor profile, course information, and a variety of pages for user interaction, including registration, login, and feedback submissions. Users can book lessons, adjust the number of participants, and complete payments online. This project aims to enhance the experience of both instructors and students in the world of yoga and pilates.
+The **Black Rock Yoga Pilates Studio** is a website designed for yoga and pilates instructors to showcase their courses and manage bookings. The site features an instructor profile, course information, and multiple user interaction pages, including registration, login, booking, payments, and feedback submission. Users can book lessons, adjust the number of participants, and complete payments online, enhancing the overall experience for both instructors and students.
+
+## About the Project
+This is my second web development project. The goal was to create a simple yet functional web experience for a yoga and pilates studio, covering class promotion, booking, and feedback workflows. During this project, I focused on applying **responsive design principles**, building **basic user interactions**, and using **browser-side storage** to manage booking and user data.
+
+
+## 🚀 Live Demo
+
+👉 [**Black Rock Yoga & Pilates Studio**](https://blackrockpilatesyoga.netlify.app/)  🧘‍♀️🧘‍♂️🪷
+
+## Usage
+
+- Navigate through the site: Use the navigation menu to access different pages (Home, About, Classes).
+- Book a Class: Choose a class from the Classes page, select the number of participants, and proceed to the payment page.
+- Register or Log In: Create an account or log in to manage your bookings and provide feedback.
+- Provide Feedback: Share your thoughts about the instructor and courses to help improve the experience.
 
 ## Features
 - **Home Page**: Information about the instructor and courses offered.
@@ -12,19 +32,15 @@ The **Black Rock Yoga Pilates Studio** is a website designed for yoga and pilate
 - **User Registration and Login**: Secure user accounts for personalized experiences.
 - **Feedback System**: Users can leave feedback about the instructor and courses.
 
-## Usage
-- Navigate through the site: Use the navigation menu to access different pages (Home, About, Classes).
-- Book a Class: Choose a class from the Classes page, select the number of participants, and proceed to the payment page.
-- Register or Log In: Create an account or log in to manage your bookings and provide feedback.
-- Provide Feedback: Share your thoughts about the instructor and courses to help improve the experience.
-
 ## Technologies Used
-- **HTML5**
-- **CSS3 (Sass)**
-- **Bootstrap**
-- **JavaScript (Vanilla JS)**
-- **Responsive Web Design**: Utilized media queries, flexbox, and grid layout.
-- **Session Storage**: Used for booking classes and transferring data to the shopping cart page.
+
+- 🧱 **HTML5** – Semantic structure  
+- 🎨 **CSS3 (Sass)** – Scalable styling architecture  
+- 🧩 **Bootstrap** – Responsive UI components  
+- ⚙️ **JavaScript (Vanilla JS)** – Dynamic functionality  
+- 📱 **Responsive Web Design** – Media queries, Flexbox, Grid  
+- 🗂️ **Session Storage** – Booking data persistence and cart transfer
+
   
 ## 📚 Learning & Insights
 
@@ -38,22 +54,19 @@ Through the **Yoga Pilates Studio** project, I gained valuable insights and skil
 
 This project solidified my foundational knowledge of web development and deepened my interest in creating applications that enhance user experiences in health and wellness.
 
-## Demo 🔗
-
- 👉 [**You can check out a live demo of the Yoga&Pilates Studio!**](https://blackrockpilatesyoga.netlify.app/) 🧘‍♀️🧘‍♂️🪷
 
 ## Installation
-To set up the Monthly Planner on your local machine:
+To set up the **Black Rock Yoga & Pilates Studio** on your local machine:
 
 1. Clone this repository:
    ```bash
    git clone https://github.com/yourusername/websiteFor_yogaPilatesStudio.git
    ```
-3. Navigate to the project directory:
-  ```bash
-  cd websiteFor_yogaPilatesStudio
-  ```
-3.Open index.html in your preferred web browser to start using the planner.
+2. Navigate to the project directory:
+    ```bash
+    cd websiteFor_yogaPilatesStudio
+    ```
+3. Open index.html in your preferred web browser to start using the planner.
 
 ## Contributing
 - If you'd like to contribute to the project, please fork the repository and create a pull request with your proposed changes.
