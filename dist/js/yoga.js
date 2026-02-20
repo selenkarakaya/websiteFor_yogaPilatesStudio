@@ -34,7 +34,7 @@ function purchaseClicked(e) {
   //   cartItems.removeChild(cartItems.firstChild);
   // }
   e.preventDefault();
-  let pageContent = document.getElementById("selen").innerHTML;
+  let pageContent = document.getElementById("shoppingCart").innerHTML;
   sessionStorage.setItem("page1content", pageContent);
   document.location.href = "shopping.html";
   updateCartTotal();
