@@ -57,11 +57,11 @@ function quantityChanged(event) {
 function addToCartClicked(event) {
   let button = event.target;
   let shopItem = button.parentElement.parentElement;
-  console.log(shopItem);
+
   let day =
     button.parentElement.parentElement.parentElement.previousElementSibling
       .innerText;
-  console.log(day);
+
   let title = shopItem.getElementsByClassName("shop-item-title")[0].innerText;
   let price = shopItem.getElementsByClassName("shop-item-price")[0].innerText;
   let time = shopItem.getElementsByClassName("shop-item-time")[0].innerText;

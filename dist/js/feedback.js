@@ -4,7 +4,6 @@ function addRecommendation(e) {
   let name = document.getElementById("nameComment");
   // If the user has left a recommendation, display a pop-up
   if (recommendation.value != null && recommendation.value.trim() != "") {
-    console.log("New recommendation added");
     showPopup(true);
 
     // Create a new 'recommendation' element and set it's value to the user's message
